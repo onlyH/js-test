@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>题目描述 移除数组 arr 中的所有值与 item 相等的元素。不要直接修改数组 arr，结果返回新的数组</p>
+		<p>示例1: 输入 [1, 2, 3, 4, 2], 2 输出 [1, 3, 4]</p>
+		<script>
+			function abc(arr, item) {
+				var nes = arr.slice(0);
+				for(var i = 0; i < nes.length; i++) {
+					if(nes[i] == item) {
+						nes.splice(i, 1);
+						i--;
+					}
+				}
+				return nes;
+			}
+
+			function abc(arr, item) {
+				var newarr = [];
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] != item) {
+						newarr.push(arr[i]);
+					}
+				}
+				return newarr;
+			}
+
+			function abc(arr, item) {
+				return arr.filter(function(ele) {
+					return ele != item;
+				})
+			}
+
+			function removeWidthCopy(arr, item) {
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[0] !== item) {
+						arr.push(arr[0]);
+
+					}
+					arr.shift();
+				}
+				return arr;
+			}
+			removeWidthCopy([1, 2, 3, 4, 3, 2, 33, 4, 2, 4], 2)
+
+			function copy(arr, item) {
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] == item) {
+						arr.splice(i, 1)
+					}
+				}
+				return arr;
+			}
+			copy([1, 1, 1, 2, 1, 3, 2, 4], 1)
+
+			function rem(arr, item) {
+				while(arr.indexOf(item) != -1) {
+					arr.splice(arr.indexOf(item), 1)
+				}
+				return arr;
+			}
+			rem([1, 1, 1, 2, 1, 3, 4, 2], 1)
+
+			function reo(arr, item) {
+				arr = Array.from(new Set(arr));
+				arr.splice(arr.indexOf(item), 1)
+				return arr;
+			}
+			reo([1, 1, 1, 2, 1, 3, 2, 4], 1)
+
+			function Copy(arr, i) {       
+				return arr.indexOf(i) == -1 ? arr : arr.splice(arr.indexOf(i), 1) && Copy(arr, i)
+			}
+		</script>
+
+	</body>
+
+</html>
