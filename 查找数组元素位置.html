@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>题目描述:找出元素 item 在给定数组 arr 中的位置</p>
+		<p>输出描述:如果数组中存在 item，则返回元素在数组中的位置，否则返回 -1</p>
+		<p>输入 [ 1, 2, 3, 4 ], 3 输出 2</p>
+		<script>
+			//indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置
+			function abc(arr, item) {
+				return arr.indexOf(item);
+			}
+			abc([1, 2, 3, 4, 5], 3)
+
+			function a(arr, item) {
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] === item) {
+						return i;
+					}
+				}
+				return -1;
+			}
+			a([1, 2, 3, 4, 5], 3)
+
+			function b(arr, item) {
+				var bb = -1;
+				arr.forEach(function(item1, index) {
+					if(arr[index] === item) {
+						bb = index;
+						return;
+					}
+				})
+				return bb;
+			}
+			b([1, 2, 3, 4, 5], 3)
+
+			function inde(arr, item) {
+				return(arr instanceof Array) ? arr.join('').indexOf(item) : -1
+			}
+			inde([1, 2, 3, 4, 5], 3)
+		</script>
+	</body>
+
+</html>
