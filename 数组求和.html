@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>题目描述：计算给定数组 arr 中所有元素的总和</p>
+		<p>输入描述:数组中的元素均为 Number 类型</p>
+		<p>示例1：输入[ 1, 2, 3, 4 ]，输出：10</p>
+		<script>
+			function abc(arr) {
+				var sum = 0;
+				for(var i = 0; i < arr.length; i++) {
+					sum += arr[i];
+				}
+				return sum;
+			}
+			abc([1, 2, 3, 4, 5])
+
+			function a() {
+				var sum = 0;
+				for(var i = 0; i < arguments.length; ++i) {
+					sum += arguments[i];
+				}
+				return sum;
+			}
+			a(1, 2, 3, 4, 5, 6);
+
+			function c(arr) {
+				var sum = 0;
+				arr.forEach(function(e) {
+					sum += e
+				})
+				return sum;
+			}
+			c([1, 2, 3, 4, 5])
+
+			//递归
+			function sum(arr) {
+				if(arr.length == 0) {
+					return 0;
+				} else if(arr.length == 1) {
+					return arr[0];
+				} else {
+					return arr[0] + sum(arr.slice(1))
+				}
+			}
+			sum([1, 2, 3])
+
+			function sum(arr) {
+				return arr.reduce(function(prev, curr, idx, arr) {
+					return prev + curr;
+				})
+			}
+			sum([1, 2, 3, 4, 5]);
+
+			function sum(arr) {
+				var val = 0;
+				arr.forEach(function(item, index, arr) {
+					val += item;
+				}, 0)
+				return val;
+			}
+			sum([1, 2, 3, 4, 5])
+
+			function sum(arr) {
+				return eval(arr.join("+"))
+			}
+			sum([1, 2, 3, 4, 5])
+		</script>
+	</body>
+
+</html>
