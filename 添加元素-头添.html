@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<p>题目描述 在数组 arr 开头添加元素 item。不要直接修改数组 arr，结果返回新的数组</p>
+	<p>示例1 输入 [1, 2, 3, 4], 10 输出 [10, 1, 2, 3, 4]</p>
+	<script>
+		//concat
+		function prepend(arr, item) {
+			return [item].concat(arr);
+		}
+
+		function per(arr, item) {
+			var newarr = [item];
+			[].push.apply(newarr, arr);
+			return newarr;
+		}
+
+		function pere(arr, item) {
+			var newarr = arr.slice(0); //copy array
+			newarr.unshift(item); //newarr.splice(0,0,item)
+			return newarr;
+		}
+
+		function pere(arr, item) {
+			var newarr = arr,
+				join().split(',');
+			newarr.unshift(item);
+			return newarr;
+		}
+
+		function pere(arr, item) {
+			var newarr = [];
+			for(var i = 0; i < arr.length; i++) {
+				newarr.push(arr[i])
+			}
+			newarr.unshift(item);
+			return newarr;
+		}
+	</script>
+
+	<body>
+	</body>
+
+</html>
