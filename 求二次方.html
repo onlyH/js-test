@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>输入 [1, 2, 3, 4] 输出 [1, 4, 9, 16]</p>
+		<script type="text/javascript">
+			function square(arr) {
+				var a = arr.slice(0);
+				a = a.map(function(val) {
+					return val * val;
+				})
+				return a;
+			}
+
+			function square(arr) {
+				return arr.map(function(item, index, array) {
+					return item * item;
+				})
+			}
+
+			function square(arr) {
+				//声明一个新的数组存放结果
+				var a = [];
+				arr.forEach(function(e) {
+					//将arr中的每一个元素求平方后，加入到a数组中
+					s.push(e * e);
+				})
+				return a;
+			}
+
+			function square(arr) {
+				return arr.map(function(e) {
+					return e * e;
+				})
+			}
+
+			function square(arr) {
+				return arr.map(function(e) {
+					if(typeof e === 'number') {
+						return e * e;
+					}
+				})
+			}
+
+			const square = arr => arr.map(e => e * e);
+
+			function square(arr) {
+				var a = [];
+				for(var i = 0; i < arr.length; i++) {
+					a.push(arr[i] * arr[i]);
+				}
+				return a;
+			}
+
+			function square(arr) {
+				var newarr = [];
+				for(var i = 0; i < arr.length; i++) {
+					newarr[i] = Math.pow(arr[i], 2)
+				}
+				return newarr;
+			}
+
+			function square(arr) {
+				var arr1 = arr.slice(0);
+				return arr1.map(function(item) {
+					return Math.pow(item, 2)
+				})
+			}
+
+			function square(arr) {
+				return arr.map(a => a * a);
+			}
+
+			function square(arr) {
+				var newarr = arr.map(function(item, index) {
+					return item * item;
+				})
+				return newarr;
+			}
+		</script>
+	</body>
+
+</html>

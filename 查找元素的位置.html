@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>输入 'abcdefabc' 输出 [0, 6]</p>
+		<script type="text/javascript">
+			function findall(arr, target) {
+				var temp = [];
+				arr.forEach(function(val, index) {
+					val !== target || temp.push(index);
+				})
+				return temp;
+			}
+
+			function findall(arr, target) {
+				var result = [];
+				arr.filter(function(item, index) {
+					return item === target && result.push(index);
+				})
+				return result;
+			}
+
+			function findall(arr, target) {
+				var result = [];
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] === target) {
+						result.push(i);
+					}
+				}
+				return result;
+			}
+
+			function findAllOccurrences(arr, target) {    
+				var result = [],
+					index = arr.lastIndexOf(target);    
+				while(index > -1) {        
+					result.push(index);        
+					arr.splice(index, 1);
+					//arr=arr.slice(0,index);
+					        
+					index = arr.lastIndexOf(target);    
+				}    
+				return result;
+			}
+
+			function findall(arr, target) {
+				var result = [],
+					index = arr.indexOf(target);
+				while(index > -1) {
+					result.push(index);
+					index = arr.indexOf(target, index + 1);
+				}
+				return result;
+			}
+
+			function findall(arr, target) {
+				return arr.map(function(e, index) {
+					return e === item ? index : -1;
+				}).filter(function(i) {
+					/* 过滤掉 i === -1 的情况 */
+					return i !== -1;
+				})
+			}
+
+			const findall = (arr, item) =>
+				arr.map((e, index) => e === item ? index : -1)
+				.filter(i => i !== -1);
+		</script>
+	</body>
+
+</html>
