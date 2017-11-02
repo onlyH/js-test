@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<p>输入 [1, 2, 3, 4], 'z', 2</p>
+		<p>输出 [1, 2, 'z', 3, 4]</p>
+		<script type="text/javascript">
+			function insert(arr,item,index) {
+				var a = [].concat(arr);
+				a.splice(index,0,item);
+				return a;
+			}
+			
+			function insert(arr,item,index) {
+				return arr.slice(0,index).concat(item,arr.slice(index));
+			}
+			
+			function insert(arr,item,index) {
+				var newarr = arr.concat();
+				newarr.splice(indx,0,item);
+				return newarr;
+			}
+			
+			function insert(arr,item,index) {
+				var newarr = arr.slice(0);
+				newarr.splice(index,0,item);
+				return newarr;
+			}
+			
+			function insert(arr,item,index) {
+				var newarr = [];
+				[].push.apply(newarr,arr);
+				newarr.splice(index,0,item);
+				return newarr;
+			}
+			
+			function insert(arr,item,index) {
+				var newarr = [];
+				for(var i = 0; i<arr.length;i++) {
+					newarr.push(arr[i]);
+				}
+				newarr.splice(index,0,item);
+				return newarr;
+			}
+		</script>
+	</body>
+
+</html>

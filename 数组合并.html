@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function concat(arr1, arr2) {
+				return arr1.concat(arr2);
+			}
+
+			function concat(arr1, arr2) {
+				var newarr = arr1.slice(0);
+				for(var i = 0; i < arr2.length; i++) {
+					newarr.push(arr2[i]);
+				}
+			}
+
+			function concat(arr1, arr2) {
+				var newarr = [];
+				for(var i = 0; i < arr1.length; i++) {
+					newarr.push(arr1[i]);
+				}
+				for(var j = 0; j < arr2.length; j++) {
+					newarr.push(arr2[j]);
+				}
+				return newarr;
+			}
+		</script>
+	</body>
+
+</html>
